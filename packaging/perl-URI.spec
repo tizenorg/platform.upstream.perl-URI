@@ -6,6 +6,7 @@ Summary:        A Perl module implementing URI parsing and manipulation
 Url:            http://search.cpan.org/dist/URI/
 Group:          Development/Libraries
 Source0:        URI-%{version}.tar.gz
+Source1001: 	perl-URI.manifest
 BuildRequires:  perl
 BuildRequires:  perl(MIME::Base64)
 BuildArch:      noarch
@@ -17,6 +18,7 @@ updated by RFC 2732).
 
 %prep
 %setup -q -n URI-%{version}
+cp %{SOURCE1001} .
 chmod 644 uri-test
 
 %build
