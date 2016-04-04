@@ -22,6 +22,9 @@ cp %{SOURCE1001} .
 chmod 644 uri-test
 
 %build
+export CFLAGS+=" -fvisibility=hidden"
+  export CXXFLAGS+=" -fvisibility=hidden"
+  
 perl Makefile.PL INSTALLDIRS=vendor
 make %{?_smp_mflags}
 
